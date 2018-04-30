@@ -1,0 +1,22 @@
+<div class="navbar">
+  <ul>
+      <li>
+        <a href="#" [ngClass]="{'selected': item === 'animal'}" (click)="setItem('animal')">Show Animals</a>
+      </li>
+      <li>
+        <a href="#" [ngClass]="{'selected': item === 'city'}" (click)="setItem('city')">Show Cities</a>
+      </li>
+      <li>
+        <a href="#" [ngClass]="{'selected': item === 'friend'}" (click)="setItem('friend')">Show Friends</a>
+      </li>  
+      <li>
+          <a href="#" (click)="add()">Add</a>
+      </li>
+      <li>
+        <a href="#" (click)="remove()">Remove</a>
+      </li>
+  </ul>
+</div>
+<div class="list">
+  <app-list [data]="data" [item]="item"></app-list>
+</div>

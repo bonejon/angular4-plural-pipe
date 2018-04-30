@@ -1,0 +1,4 @@
+<div *ngIf="data && item">
+    <h3 class="text-center">{{ data.length | i18nPlural: itemPluralMapping[item] }}</h3>
+    <app-card *ngFor="let d of data" [icon]="d?.icon || 'mood'" [cardTitle]="d?.title || 'hello'" [cardText]="d?.text || 'my desc'"></app-card>
+</div>
